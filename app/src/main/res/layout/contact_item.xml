@@ -1,15 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CardView xmlns:android="http://schemas.android.com/apk/res/android"
           android:layout_width="match_parent"
-          android:layout_height="match_parent">
+          android:layout_height="match_parent"
+          xmlns:app="http://schemas.android.com/apk/res-auto"
+          xmlns:tools="http://schemas.android.com/tools">
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <ImageView
+                    android:id="@+id/iv_photo"
+                    app:layout_constraintTop_toTopOf="@id/tv_name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_phone"
+                    android:contentDescription="@string/iv_photo_content_desc"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    tools:src="@tools:sample/avatars"   />
 
 
             <TextView
-                    android:layout_width="@dp"
-                    android:layout_height="match_parent">
+                    android:id="@+id/tv_name"
+                    app:layout_constraintTop_toTopOf="@+id/iv_photo"
+                    app:layout_constraintStart_toEndOf="@+id/iv_photo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+        <TextView
+                android:id="@+id/tv_phone"
+                app:layout_constraintTop_toTopOf="@+id/iv_photo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </CardView>

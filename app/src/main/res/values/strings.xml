@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Lista de Contatos</string>
+    <string name="iv_photo_content_desc">iv_photo_content_desc</string>
 </resources>
